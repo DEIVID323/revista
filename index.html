@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecoMag - Portada</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- PORTADA.HTML -->
+    <div class="main-container">
+        <div class="content-card text-center">
+            <h1 class="magazine-title">
+                <i class="fas fa-star"></i> RecoMag <i class="fas fa-star"></i>
+            </h1>
+            <p class="magazine-subtitle">
+                Tu revista digital de recomendaciones imprescindibles
+            </p>
+            <p class="lead mb-4">
+                Descubre las mejores películas, series, música, comida, libros y actividades seleccionadas especialmente
+                para ti.
+            </p>
+            <button onclick="navigateToPage('movies')" class="custom-btn">
+                <i class="fas fa-arrow-right me-2"></i>
+                Comenzar Exploración
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function createMoviesPage() {
+            return `
+                <div class="movies-bg">
+                    <div class="container py-5">
+                        <div class="page-header">
+                            <h1 class="page-title">
+                                <i class="fas fa-film"></i> Movies & Series
+                            </h1>
+                            <p class="page-subtitle">Las mejores producciones audiovisuales del momento</p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="assets/imgrafa/terminator.jpg" alt="terminator">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Terminator (1991)</h5>
+                                        <p class="text-muted">1. You should watch Terminator because it has an exciting story.
+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://m.media-amazon.com/images/M/MV5BNTdmZjEyMzktNGMzNS00ZWMyLTljNGMtOTA1ZTNlMzkwZDk0XkEyXkFqcGc@._V1_.jpg" alt="Stranger Things">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pablo Escobar: El Patrón del Mal</h5>
+                                        <p class="text-muted">You should watch Pablo Escobar: El Patrón del Mal, a Colombian series based on real events.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/96CEB4/FFFFFF?text=Dune" alt="Dune">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dune (2021)</h5>
+                                        <p class="text-muted">Ciencia Ficción / Aventura</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/FFEAA7/333333?text=Wednesday" alt="Wednesday">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Wednesday</h5>
+                                        <p class="text-muted">Comedia / Horror</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/45B7D1/FFFFFF?text=Top+Gun+Maverick" alt="Top Gun Maverick">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Top Gun: Maverick</h5>
+                                        <p class="text-muted">Acción / Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="navigation">
+                            <button onclick="navigateToPage('songs')" class="custom-btn">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Siguiente: Música
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createSongsPage() {
+            return `
+                <div class="songs-bg">
+                    <div class="container py-5">
+                        <div class="page-header">
+                            <h1 class="page-title">
+                                <i class="fas fa-music"></i> Música & Artistas
+                            </h1>
+                            <p class="page-subtitle">Los mejores sonidos para tus oídos</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="/assets/imgrafa/grancombo.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Gran Combo</h5>
+                                        <p class="text-muted">2. You should listen to Gran Combo because their songs are timeless.
+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO473sfm-default.jpg" alt="Grupo Frontera">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Grupo Frontera</h5>
+                                        <p class="text-muted">You should listen to Grupo Frontera, their songs are catchy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/96CEB4/FFFFFF?text=The+Weeknd" alt="The Weeknd">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Weeknd</h5>
+                                        <p class="text-muted">R&B / Pop</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/FFEAA7/333333?text=Dua+Lipa" alt="Dua Lipa">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dua Lipa</h5>
+                                        <p class="text-muted">Pop / Dance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/45B7D1/FFFFFF?text=Arctic+Monkeys" alt="Arctic Monkeys">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arctic Monkeys</h5>
+                                        <p class="text-muted">Rock Indie</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <button onclick="navigateToPage('dish')" class="custom-btn">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Siguiente: Gastronomía
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createDishPage() {
+            return `
+                <div class="dish-bg">
+                    <div class="container py-5">
+                        <div class="page-header">
+                            <h1 class="page-title">
+                                <i class="fas fa-utensils"></i> Platos & Restaurantes
+                            </h1>
+                            <p class="page-subtitle">Experiencias gastronómicas imperdibles</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="assets/imgrafa/pizza.jpg" alt="Pizza">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pizza</h5>
+                                        <p class="text-muted">You should try pizza from Domino’s because it’s delicious and fresh..
+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://www.andrescarnederes.com/uploads/images/galeria/64c440214aafe362715777.jpg" alt="Andres Carne de Res">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Andres Carne de Res</h5>
+                                        <p class="text-muted">You should eat at Andres carne de res in Bogota its a unique place full of music</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/96CEB4/FFFFFF?text=Pizza+Napoletana" alt="Pizza Italiana">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Don Antonio</h5>
+                                        <p class="text-muted">Pizza Napoletana</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/FFEAA7/333333?text=Tacos+El+Pastor" alt="Tacos Mexicanos">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tacos El Pastor</h5>
+                                        <p class="text-muted">Cocina Mexicana</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/45B7D1/FFFFFF?text=Le+Bernardin" alt="Restaurante Francés">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Le Bernardin</h5>
+                                        <p class="text-muted">Alta Cocina Francesa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <button onclick="navigateToPage('books')" class="custom-btn">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Siguiente: Libros
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createBooksPage() {
+            return `
+                <div class="books-bg">
+                    <div class="container py-5">
+                        <div class="page-header">
+                            <h1 class="page-title">
+                                <i class="fas fa-book"></i> Libros Recomendados
+                            </h1>
+                            <p class="page-subtitle">Lecturas que transformarán tu perspectiva</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="assets/imgrafa/one.jpg" alt="One Hundred Years">
+                                    <div class="card-body">
+                                        <h5 class="card-title">One Hundred Years of Solitude</h5>
+                                        <p class="text-muted">You should read One Hundred Years of Solitude because it’s magical and inspiring.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/7c/f0/7cf0c8ad744e562d3bc0acb6db349621.jpg" alt="Delirio by Laura Restrepo">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Delirio by Laura Restrepo</h5>
+                                        <p class="text-muted">You should read Delirio by Laura Restrepo, one of Colombia most celebrated novels</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/96CEB4/FFFFFF?text=The+7+Habits" alt="The 7 Habits">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The 7 Habits of Highly Effective People</h5>
+                                        <p class="text-muted">Stephen Covey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/FFEAA7/333333?text=El+Alquimista" alt="El Alquimista">
+                                    <div class="card-body">
+                                        <h5 class="card-title">El Alquimista</h5>
+                                        <p class="text-muted">Paulo Coelho</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/45B7D1/FFFFFF?text=Sapiens" alt="Sapiens">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sapiens</h5>
+                                        <p class="text-muted">Yuval Noah Harari</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <button onclick="navigateToPage('activities')" class="custom-btn">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Siguiente: Actividades
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createActivitiesPage() {
+            return `
+                <div class="activities-bg">
+                    <div class="container py-5">
+                        <div class="page-header">
+                            <h1 class="page-title">
+                                <i class="fas fa-rocket"></i> Actividades & Planes
+                            </h1>
+                            <p class="page-subtitle">Experiencias únicas para vivir</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="assets/imgrafa/playa.jpg" alt="Hiking">
+                                    <div class="card-body">
+                                        <h5 class="card-title">beach</h5>
+                                        <p class="text-muted">You should visit the beach because it’s relaxing and fun.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS61mxRM9wrlttbn-7KsZSP5RHssahwpmVIaQ&s" alt="La Candelaria">
+                                    <div class="card-body">
+                                        <h5 class="card-title">la candelaria Bogota</h5>
+                                        <p class="text-muted">You should take a photo walk in la candelaria Bogota the streets are full of history</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/96CEB4/FFFFFF?text=Cooking+Class" alt="Clase de cocina">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Clase de Cocina Italiana</h5>
+                                        <p class="text-muted">Gastronomía hands-on</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/FFEAA7/333333?text=Concert+Hall" alt="Concierto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Concierto Sinfónico</h5>
+                                        <p class="text-muted">Música clásica en vivo</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="recommendation-card">
+                                    <img src="https://via.placeholder.com/300x250/45B7D1/FFFFFF?text=Hot+Air+Balloon" alt="Globo aerostático">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vuelo en Globo</h5>
+                                        <p class="text-muted">Aventura aérea</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <button onclick="navigateToPage('portada')" class="custom-btn">
+                                <i class="fas fa-home me-2"></i>
+                                Volver al Inicio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createPortadaPage() {
+            return `
+                <div class="main-container">
+                    <div class="content-card text-center">
+                        <h1 class="magazine-title">
+                            <i class="fas fa-star"></i> RecoMag <i class="fas fa-star"></i>
+                        </h1>
+                        <p class="magazine-subtitle">
+                            Tu revista digital de recomendaciones imprescindibles
+                        </p>
+                        <p class="lead mb-4">
+                            Descubre las mejores películas, series, música, comida, libros y actividades seleccionadas especialmente
+                            para ti.
+                        </p>
+                        <button onclick="navigateToPage('movies')" class="custom-btn">
+                            <i class="fas fa-arrow-right me-2"></i>
+                            Comenzar Exploración
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+
+</html>
