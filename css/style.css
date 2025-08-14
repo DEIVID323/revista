@@ -83,6 +83,12 @@
         transition: all 0.3s ease;
         border: 2px solid transparent;
         margin-bottom: 20px;
+        width: 100%;
+            aspect-ratio: 16 / 9;
+            /* Mantiene proporción */
+            overflow: hidden;
+            /* Oculta lo que se recorte */
+            border-radius: 10px;
     }
 
     .recommendation-card:hover {
@@ -97,10 +103,15 @@
             /* Se ajusta automáticamente */
             object-fit: contain;
             /* Mantiene proporción sin recortar */
+                object-fit: cover;
+                /* Escala y recorta sin deformar */
+                object-position: center;
+                /* Centra la parte visible */
+                transition: transform 0.3s ease;
         }
 
     .recommendation-card:hover img {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .recommendation-card .card-body {
