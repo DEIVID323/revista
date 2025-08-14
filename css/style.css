@@ -91,14 +91,13 @@
         border-color: var(--dark-yellow);
     }
 
-    .recommendation-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;       /* Rellena el espacio recortando si es necesario */
-    object-position: center; /* Centra la parte visible */
-    transition: transform 0.3s ease; /* Si quieres animaciones de zoom */
-}
-
+        .recommendation-card img {
+            width: 100%;
+            height: auto;
+            /* Se ajusta automáticamente */
+            object-fit: contain;
+            /* Mantiene proporción sin recortar */
+        }
 
     .recommendation-card:hover img {
         transform: scale(1.1);
@@ -139,6 +138,19 @@
     }
 
     /* Animaciones */
+    @media (hover: hover) {
+    .recommendation-card img:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+    .recommendation-card {
+        aspect-ratio: 4 / 3; /* Proporción más alta para móvil */
+    }
+}
+
     @keyframes fadeInDown {
         from {
             opacity: 0;
