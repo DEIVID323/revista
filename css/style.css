@@ -75,28 +75,40 @@
         backdrop-filter: blur(10px);
     }
 
-    .recommendation-card {
-        background: white;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-        margin-bottom: 20px;
-    }
-
-    .recommendation-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        border-color: var(--dark-yellow);
-    }
-
+        .recommendation-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            margin-bottom: 20px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* Imagen arriba, texto abajo */
+            align-items: center;
+            /* Centra horizontalmente */
+            text-align: center;
+            /* Centra el texto */
+        }
+    
+        .recommendation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-color: var(--dark-yellow);
+        }
+    
         .recommendation-card img {
-            width: 100%;
+            width: auto;
             height: auto;
-            /* Se ajusta automáticamente */
+            max-width: 100%;
+            max-height: 400px;
+            /* Limita la altura para que el texto no desaparezca */
+            display: block;
             object-fit: contain;
-            /* Mantiene proporción sin recortar */
+            margin: 0 auto;
+            /* Centra horizontalmente */
         }
 
     .recommendation-card:hover img {
@@ -138,19 +150,20 @@
     }
 
     /* Animaciones */
- @media (hover: hover) {
-    .recommendation-card img:hover {
-        transform: scale(1.1);
-    }
-}
 
-/* Ajuste para móvil */
 @media (max-width: 768px) {
     .recommendation-card {
-        aspect-ratio: 4 / 3; /* Proporción más alta para móvil */
+        width: auto;
+        /* Que se ajuste al contenido */
+        max-width: 100%;
+        /* Escala proporcional en móvil */
+    }
+
+    .recommendation-card img {
+        max-width: 100%;
+        height: auto;
     }
 }
-
     @keyframes fadeInDown {
         from {
             opacity: 0;
