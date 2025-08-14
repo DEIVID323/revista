@@ -92,14 +92,16 @@
     }
 
     .recommendation-card img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Rellena el espacio recortando si es necesario */
+    object-position: center; /* Centra la parte visible */
+    transition: transform 0.3s ease; /* Si quieres animaciones de zoom */
+}
+
 
     .recommendation-card:hover img {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
     .recommendation-card .card-body {
