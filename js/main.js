@@ -6,6 +6,7 @@
         // Crear efecto de transición
         document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.3s ease';
+     window.scrollTo({ top: 0, behavior: 'smooth' });
 
             setTimeout(() => {
         // Simulamos la navegación (en un entorno real, usarías window.location.href)
